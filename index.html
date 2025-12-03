@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Yasuke'Style</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+     <script src="https://kit.fontawesome.com/690ca3a973.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="bstyle2.css">
+    <style type="text/css">
+
+    
+        body {
+            background-color: #f5f0eb;
+        }
+
+        .hero-section {
+            padding: 60px 0 40px;
+            text-align: center;
+        }
+
+        .hero-section h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #2c2c2c;
+            margin-bottom: 20px;
+        }
+
+        .hero-section p {
+            font-size: 1.1rem;
+            color: #7a7a7a;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 380px;
+            background: linear-gradient(135deg, #f5deb3 0%, #deb887 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .product-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .product-card:hover .product-overlay {
+            opacity: 1;
+        }
+
+        .btn-learn-more {
+            background-color: #d46f4d;
+            color: white;
+            padding: 12px 35px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 500;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-learn-more:hover {
+            background-color: #c45f3d;
+            color: white;
+        }
+
+        .product-content {
+            padding: 25px;
+        }
+
+        .product-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #2c2c2c;
+            margin-bottom: 12px;
+        }
+
+        .product-description {
+            font-size: 0.95rem;
+            color: #7a7a7a;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .product-price {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #d46f4d;
+        }
+
+        .btn-view-collection {
+            background-color: #d46f4d;
+            color: white;
+            padding: 15px 45px;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .btn-view-collection:hover {
+            background-color: #c45f3d;
+            transform: scale(1.05);
+            color: white;
+        }
+
+        .commitment-section {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .commitment-icon {
+            font-size: 3rem;
+            color: #d46f4d;
+            margin-bottom: 30px;
+        }
+
+        .commitment-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2c2c2c;
+            margin-bottom: 25px;
+        }
+
+        .commitment-section p {
+            font-size: 1.1rem;
+            color: #7a7a7a;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            line-height: 1.8;
+        }
+
+        .learn-more-link {
+            color: #d46f4d;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: color 0.3s ease;
+        }
+
+        .learn-more-link:hover {
+            color: #c45f3d;
+        }
+
+
+        /* Placeholder images using gradients and icons */
+        .product-card {
+            border: 1px solid #e5e5e5;
+        }
+
+    
+
+        /* Placeholder images using gradients and icons 
+        .product-1 { background: linear-gradient(135deg, #4169E1 0%, #1E3A8A 100%); }
+        .product-2 { background: linear-gradient(135deg, #059669 0%, #064E3B 100%); }
+        .product-3 { background: linear-gradient(135deg, #DC2626 0%, #7F1D1D 100%); }
+        .product-4 { background: linear-gradient(135deg, #DC2626 0%, #92400E 100%); } */
+    </style>
+</head>
+
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar fixed-top">
+        <div class="container">
+            <div class="d-flex justify-content-end">
+                <a href="tel:+221781646424">
+                    <i class="fas fa-phone"></i>+221 70 941 91 65
+                </a>
+                <a href="mailto:omar.gaye@galsenstyle.com">
+                    <i class="fas fa-envelope"></i>yasukekashta@gmail.com
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fixed Navbar -->
+    <nav class="navbar navbar-expand-lg" style="top: 37px;">
+        <div class="container">
+            <a class="brand-logo" href="#">Yaske'<span class="style-text">Style</span></a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Welcome</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="collection.html">Collection</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item ms-3">
+                        <a href="contact.html" class="contact-btn">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="card-header">
+        <main style="display: flex; align-items: center; justify-content: center;">
+            <div class="baniere">
+                <h1 style="font-weight: bolder; color: #2c2c2c;">African Elegance</h1>
+                    <h1 style="font-weight: bolder; color: #c45f3d;">Authentic</h1>
+                <p class="p-h">Discover our exclusive collection of traditional African outfits, where each piece tells
+                    a story of culture, craftsmanship, and elegance.</p>
+                <a href="collection.html"><button class="btn-main">Discover the Collection</button></a>
+                <a href="about.html"><button type="button" class="btn-main btn-outline-secondary">Our History</button></a>
+                
+            </div>
+        </main>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1>Star Collection</h1>
+            <p>Discover our selection of iconic pieces that celebrate the elegance and authenticity of African fashion.
+            </p>
+        </div>
+    </section>
+    <!-- Product Cards Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Product 1 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="download (8).jpeg" alt="Grand Boubou Royal">
+                            <div class="product-overlay">
+                                <a href="#" class="btn-learn-more">En Savoir Plus</a>
+                            </div>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Grand Boubou Royal</h3>
+                            <p class="product-description">Élégant boubou traditionnel avec broderies dorées, parfait
+                                pour les...</p>
+                            <div class="product-price">289 €</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="download (6).jpeg" alt="Kaftan Émeraude">
+                            <div class="product-overlay">
+                                <a href="#" class="btn-learn-more">En Savoir Plus</a>
+                            </div>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Kaftan Émeraude</h3>
+                            <p class="product-description">Kaftan fluide en soie avec motifs africains authentiques et
+                                finitions en...</p>
+                            <div class="product-price">245 €</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="Wa 1.jpeg" alt="Robe Ankara Moderne">
+                            <div class="product-overlay">
+                                <a href="#" class="btn-learn-more">En Savoir Plus</a>
+                            </div>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Robe Ankara Moderne</h3>
+                            <p class="product-description">Robe contemporaine en tissu wax coloré, alliant tradition et
+                                modernité.</p>
+                            <div class="product-price">159 €</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="Wa 2.jpeg" alt="Dashiki Classique">
+                            <div class="product-overlay">
+                                <a href="#" class="btn-learn-more">En Savoir Plus</a>
+                            </div>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Dashiki Classique</h3>
+                            <p class="product-description">Chemise traditionnelle unisexe avec motifs géométriques
+                                vibrants.</p>
+                            <div class="product-price">89 €</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- View Collection Button -->
+            <div class="text-center mt-5">
+                <a href="collection.html"><button class="btn btn-view-collection">View the Entire Collection</button></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Commitment Section -->
+    <section class="commitment-section">
+        <div class="container">
+            <div class="commitment-icon">♥</div>
+            <h2>Our Commitment</h2>
+            <p>At Galsen'Style, we celebrate the authenticity of African traditions through every creation. Our pieces
+                are carefully crafted by talented artisans who perpetuate ancestral know-how, while supporting local
+                communities and guaranteeing ethical and transparent trade.</p>
+            <a href="about.html" class="learn-more-link">Learn more about our history →</a>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Brand Column -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-brand">
+                        <h3 class="brand-name">Yasuke<span class="style-text">Style</span></h3>
+                        <p class="footer-tagline">Authentic African elegance at your fingertips.</p>
+                        <div class="social-links">
+                            <a href="https://facebook.com" class="social-link" aria-label="Facebook">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+                            <a href="https://instagram.com" class="social-link" aria-label="Instagram">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Column -->
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="footer-heading">Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html" class="footer-link">Welcome</a></li>
+                        <li><a href="collection.html" class="footer-link">Collection</a></li>
+                        <li><a href="about.html" class="footer-link">About</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Informations Column -->
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="footer-heading"></h4>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">Delivery</a></li>
+                        <li><a href="#" class="footer-link">Returns</a></li>
+                        <li><a href="#" class="footer-link">FAQ</a></li>
+                        <li><a href="#" class="footer-link">Legal Notices</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Column -->
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="footer-heading">Contact</h4>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt contact-icon"></i>
+                        <div>
+                            <div>Dakar</div>
+                            <div>Sénégal</div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone contact-icon"></i>
+                        <div>+221 70 941 91 65</div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope contact-icon"></i>
+                        <div>yaukekashta@gmail.com</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p class="copyright">© 2025 Yasuke'Style.All rights reserved .</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
